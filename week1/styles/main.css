@@ -1,0 +1,27 @@
+:root{
+    --main-color: white;
+    --sec-color: black;
+    --mn-ft-color: white;
+}
+
+body{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template:1fr 5fr 1fr / 2fr 1fr;
+}
+
+header{
+    grid-area: 1/1/2/3;
+    background-color: var(--sec-color);
+}
+
+main{
+    grid-area: 2/1/3/2;
+    background-color:var(--main-color);
+}
+
+footer{
+    grid-area: 3/1/4/3;
+    background-color: var(--sec-color);
+}
