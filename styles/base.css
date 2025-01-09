@@ -67,32 +67,32 @@ section{
 
 .tag-head{
     padding: 2px ;
-}
-
-.main.ct{
-    grid-area: 1/1/2/2;
-}
-
-.aside-ct{
-    grid-area: 1/2/2/3;
-    height: fit-content;
-}
-
-li a:hover{
-color: aqua;
-}
-div h3{
-    margin: 8px;
-}
-
-.aside-ct div,
-.main-ct div {
     background-color: gray ;
     color: #000000;
     text-align: center;
     border-radius: 5px 5px 0 0;
 }
 
+.container{
+    padding:0 10px;
+}
+
+.main-ct{
+    grid-area: 1/1/2/2;
+}
+
+.aside-ct{
+    grid-area: 1/2/2/3;
+    /* height: fit-content; */
+}
+
+li a:hover{
+color: aqua;
+}
+
+div h3{
+    margin: 8px;
+}
 
 /*--------------Footer---------------*/
 footer{
