@@ -8,6 +8,4 @@ copyrightY.innerHTML = currentYear.getFullYear()
 
 
 
-
-
 // console.log(lastMod)

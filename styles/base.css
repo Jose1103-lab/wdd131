@@ -1,0 +1,107 @@
+/*GENERAL STUFF*/
+
+body{
+    background-color: rgb(238, 238, 238);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template:auto auto 100px / 1fr;
+}
+
+a{
+    text-decoration: none;
+    padding: 5px;
+    color: #000000;
+}
+
+
+/*Styles by blocks*/
+/*--------------Header---------------*/
+header{
+    /* border: 1px solid red; */
+    grid-area: 1/1/2/2;
+    margin-bottom: 10px;
+}
+
+div h1{
+    text-align: center;
+}
+
+.nav{
+    /* border: 1px solid red; */
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap row;
+    align-items: center;
+}
+
+.nav a{
+    /* border: 1px solid red; */
+    color: #000000;
+    padding: 10px;
+    border-bottom:3px solid gray;
+    transition: 0.5s;
+}
+
+.nav a:hover{
+color: aqua;
+border-bottom:3px solid aqua;
+}
+
+/*--------------Main---------------*/
+main{
+    /* border: 1px solid red; */
+    grid-area: 2/1/3/2;
+    padding: 5px 10%;
+    display: grid;
+    grid-template: 400px / 2.5fr 1fr;
+    grid-gap: 1rem;
+}
+
+section{
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(149, 255, 246);
+}
+
+.tag-head{
+    padding: 2px ;
+}
+
+.main.ct{
+    grid-area: 1/1/2/2;
+}
+
+.aside-ct{
+    grid-area: 1/2/2/3;
+    height: fit-content;
+}
+
+li a:hover{
+color: aqua;
+}
+div h3{
+    margin: 8px;
+}
+
+.aside-ct div,
+.main-ct div {
+    background-color: gray ;
+    color: #000000;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+
+/*--------------Footer---------------*/
+footer{
+    
+    text-align: center;
+    font-size: 0.7em;
+    margin-top: 20px;
+    background-color:darkgray;
+    grid-area: 3/1/4/2;
+    border-top: 1px solid aqua;
+}
+
