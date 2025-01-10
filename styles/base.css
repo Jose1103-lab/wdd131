@@ -112,9 +112,9 @@ div h3{
 .flag-pict{
     float: left;
     width: 200px;
-    height: 150px;
+    height: auto;
     margin: 10px;
-    box-shadow: 0 0 5px rgb(255, 64, 64);
+    box-shadow: 0 0 10px rgb(255, 64, 64);
 }
 
 /*--------------Footer---------------*/
