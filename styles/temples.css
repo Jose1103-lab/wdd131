@@ -1,0 +1,139 @@
+:root{
+    --main-background: #ededed;
+    --secundary-background: #e4d9d9;
+    --light-font-color: #ffe6e6;
+    --dark-font-color: #2e0404;
+    --highlight-color1: #52d2ac;
+    --highlight-color2: #c475da;
+}
+
+body{
+    background-color: var(--main-background);
+    color: var(--dark-font-color);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.gabriela-regular {
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.rancho-regular {
+    font-family: "Rancho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Visual effects*/
+
+header{
+    background-color: var(--secundary-background);
+    padding: 1em 1em;
+    text-align: center;
+}
+
+header h1{
+     display: inline;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+}
+
+.navigator{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.navigator li{
+    list-style: none;
+    display: none;
+    margin: 5px;
+    transition: 1ms;
+}
+
+.navigator li a{
+    text-decoration: none;
+    font-size: clamp(1.2rem, 2vmin, 1.5rem);
+    color: var(--dark-font-color);
+    display: block;
+    border-bottom:2px solid var(--secundary-background);
+    padding: 0.75rem;
+    text-align: center;
+    transition: 0.5s;
+}
+
+
+.navigator a:hover, .navigator a:focus, .navigator a:active{
+    color: var(--dark-font-color);
+    border-bottom:2px solid var(--dark-font-color);
+}
+
+.show li{
+    display: block;
+}
+#menu.show::before{
+    content: "✖";
+}
+#menu::before{
+    content: "☰";
+}
+
+#menu{
+    /* border: 1px solid #ff0000; helper */
+    background-color: var(--secundary-background);
+    color: var(--dark-font-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    float: right;
+    width: fit-content;
+    cursor: pointer;
+    padding: .3rem .75rem;
+}
+
+/* -------------------------------------------------------------------- */
+
+main{
+    /* border: 1px solid #ff0000; helper */
+    max-width:  900px;
+    margin: 1rem auto;
+    padding:0 1rem; 
+}
+
+figure{
+    /* border: 1px solid #000; helper */
+    margin: 0.5rem;
+    width:fit-content ;
+}
+figure img{
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+}
+figcaption{
+    text-align: center;
+}
+figure:hover {
+    transform: scale(1.02);
+}
+
+.figure-container{
+    /* border: 1px solid #000;  helper */
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;  
+    gap: 1rem;
+}
+
+footer{
+    background-color: var(--secundary-background);
+    font-size: 0.8rem;
+    padding: 0.1em;
+    text-align: center;
+}

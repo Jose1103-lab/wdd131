@@ -75,8 +75,6 @@ border-bottom:3px solid aqua;
 main{
     /* border: 1px solid red; */
     grid-area: 2/1/3/2;
-    max-width: 1250px;
-    justify-self: center;
     margin:20px 0; 
     padding: 5px 10%;
     display: grid;
@@ -119,8 +117,7 @@ li{
     margin-bottom: 3px;
 }
 
-div h3,
-div h2{
+div h3{
     margin: 8px;
 }
 
