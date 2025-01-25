@@ -1,0 +1,83 @@
+:root{
+    --pri-bgcolor: #EAEBF0ff;
+    --sec-bgcolor1: #ADABAEff;
+    --sec-bgcolor2: #8C2421ff;
+    --light-ftcolor: #EAEBF0ff;
+    --dark-ftcolor: #000000;
+    --highlight-color1: #8C2421ff;
+    --highlight-color2: #8C846Dff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.faculty-glyphic-regular {
+    font-family: "Faculty Glyphic", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.faculty-glyphic-bold {
+    font-family: "Faculty Glyphic", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cormorant-garamond-light {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.cormorant-garamond-bold {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ------------ general layout ---------- */
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* ------------ sections layout ---------- */
+
+
+header{
+    background-color: var(--sec-bgcolor2);
+    color: var(--light-ftcolor);
+    padding: 1rem;
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    /* display: grid; */
+}
+
+.hero img{
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+}
+
+/* --------activate later */
+/* .info-box{
+    position: absolute;
+} */
+
+
+footer{
+    background-color: var(--sec-bgcolor2);
+    padding: 1rem;
+    text-align: center;
+    color: var(--light-ftcolor);
+}
+
