@@ -7,7 +7,8 @@
     <meta name="keywords" content="Norway, fjords, travel, Scandinavian, nature, adventure, Oslo, Bergen">
     <meta name="author" content="Jose Brito">
     <link rel="stylesheet" href="styles/place.css">
-    <!-- <script src="scripts/place.js" defer></script> -->
+    <link rel="stylesheet" href="styles/place-responsive.css">
+    <script src="scripts/place.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,53 +19,53 @@
 </head>
 <body>
     <header>
-        <h1>Norway Assignment</h1>
+        <h1 class="faculty-glyphic-bold">Norway Assignment</h1>
     </header>
 
     <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/norway-large.webp" media="min-width:1000px">
-                <source srcset="images/norway-large.webp" media="min-width:550px">
-                <img src="images/norway-large.webp" alt="Norway lake landcape" width="">            
-            </picture>
-            
-            <section class=" data-set">
-                <div class="info-box">
-                    <div class="title-tag">
-                        <h2>Data</h2>
-                    </div>
-                    <div class="info-items">
-                        <ul>
-                            <li>placeholder: <span id="content1"></span></li>
-                            <li>placeholder: <span id="content2"></span></li>
-                            <li>placeholder: <span id="content3"></span></li>
-                            <li>placeholder: <span id="content4"></span></li>
-                            <li>placeholder: <span id="content5"></span></li>
-                            <li>placeholder: <span id="content6"></span></li>
-                        </ul>
-                    </div>
-                </div>     
-            </section>
-            <section class="weather-set">
-                <div class="info-box">
-                    <div class="title-tag">
-                        <h2>Weather</h2>  
-                </div>
+        <picture>
+            <source srcset="images/norway-large.webp" media="(min-width: 800px)">
+            <img src="images/norway-small.webp" alt="Norway lake landcape">            
+        </picture>
+        <section class=" data-set">
+            <div class="title-tag">
+                <h2 class="cormorant-garamond-bold">Country<br>Information</h2>
+                <hr>
+            </div>
                 <div class="info-items">
-                    <ul>
-                        <li>placeholder: <span id="content1.1"></span></li>
-                        <li>placeholder: <span id="content1.2"></span></li>
-                        <li>placeholder: <span id="content1.3"></span></li>
-                        <li>placeholder: <span id="content1.4"></span></li>
+                    <ul class="faculty-glyphic-regular">
+                        <li>Area: <span class="data">385,207 km²</span></li>
+                        <li>Population: <span class="data">5.52 million(2023)</span></li>
+                        <li>Capital: <span class="data">Oslo</span></li>
+                        <li>Languages: <span class="data">Norwegian</span></li>
+                        <li>Currency: <span class="data">Norwegian Krone(kr)</span></li>
+                        <li>Time Zone: <span class="data">GMT+1</span></li>
                     </ul>
                 </div>
-            </div>
         </section>
-    </div>
+        
+        <section class="weather-set">
+                <div class="title-tag">
+                    <h2 class="cormorant-garamond-bold">Norway<br>Weather</h2> 
+                    <hr> 
+                    <span id="wth-icon">
+                        <img src="images/weather-icon.svg" alt="weather icon" width="50" width = "50">
+                    </span>
+                </div>
+                
+                <div class="info-items">
+                    <ul class="faculty-glyphic-regular">
+                        <li>Temperature: <span class="data ">10°C</span></li>
+                        <li>Condition: <span class="data">Sunny</span></li>
+                        <li>Wind: <span class="data">5 km/h</span></li>
+                        <li>Wind Child: <span class="data" id="windchill"> </span></li>
+                    </ul>
+                </div>
+        </section>
+            
     </main>
 
-    <footer>
+    <footer class="cormorant-garamond-light">
         <p class="copyr">&copy;<span id="year"></span> Jose Brito | Santiago, Rep. Dom</p>
         <p id="lastmod"></p>
     </footer>

@@ -3,20 +3,18 @@
     --sec-bgcolor1: #ADABAEff;
     --sec-bgcolor2: #8C2421ff;
     --light-ftcolor: #EAEBF0ff;
-    --dark-ftcolor: #000000;
+    --dark-ftcolor: #7d0303;
     --highlight-color1: #8C2421ff;
     --highlight-color2: #8C846Dff;
 }
 
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 .faculty-glyphic-regular {
     font-family: "Faculty Glyphic", serif;
-    font-weight: 400;
+    font-weight:300;
     font-style: normal;
 }
 
@@ -28,56 +26,105 @@
 
 .cormorant-garamond-light {
     font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
 }
-  
+
 .cormorant-garamond-bold {
     font-family: "Cormorant Garamond", serif;
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
 }
 
 /* ------------ general layout ---------- */
 
 body{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr;
 }
 
-/* ------------ sections layout ---------- */
-
-
-header{
-    background-color: var(--sec-bgcolor2);
-    color: var(--light-ftcolor);
-    padding: 1rem;
+ul{
+    padding: 0;
 }
 
 h1{
     text-align: center;
 }
+/* ------------ sections layout ---------- */
 
-main{
-    /* display: grid; */
+header{
+    background-color: var(--sec-bgcolor2);
+    color: var(--light-ftcolor);
 }
 
-.hero img{
-    /* position: relative; */
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-content: center;        
+}
+
+.data{
+    color: var(--dark-ftcolor);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+picture{
+    background-color: var(--highlight-color2);
+    grid-column: 1/span 2;
+    grid-row: 1/2;
+}
+
+picture img{
     width: 100%;
     height: auto;
 }
 
-/* --------activate later */
-/* .info-box{
-    position: absolute;
-} */
+.weather-set,
+.data-set{
+    background-color: var(--pri-bgcolor);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+}
 
+.data-set{
+    grid-column: 1/2;
+}
+.weather-set{
+    grid-column: 1/2;
+}
+
+.info-items li{
+    padding-left: 10px;
+    color: black;
+    list-style: none;
+    text-align: center;
+}
+
+.title-tag{
+    color: var(--dark-ftcolor);
+}
+
+.title-tag h2{
+    margin: 0;
+    width: fit-content;
+    display: inline-block;
+}
+
+hr{
+    width: 50%;
+    border:1px solid var(--highlight-color1) ;
+}
 
 footer{
     background-color: var(--sec-bgcolor2);
-    padding: 1rem;
-    text-align: center;
     color: var(--light-ftcolor);
+    font-size: 0.9rem;
+    text-align: center;
 }
 
