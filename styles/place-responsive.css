@@ -21,6 +21,15 @@
         filter: opacity(80%);
     }
 
+    .weather::after{
+        content: "🔆";
+        font-size: 1.5rem;
+    }
+
+    span img{
+        display: none;
+    }
+
     .weather-set{
         grid-column: 2/3;
         grid-row: 1/2;
