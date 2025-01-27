@@ -12,8 +12,5 @@ function windchillCalculator(temp, speed){
 if (temperature <= 10 && speed > 4.8){
     let windchill = windchillCalculator(temperature, speed);
     winChiholder.textContent = (windchill.toFixed(1) + "°C");
-    // console.log("Wind Chill: "+ windchill.toFixed(1) + "°C") to test the output 
-}else{
-    winChiholder.textContent = ("N/A")
 }
 
