@@ -67,7 +67,6 @@ header nav{
     transition: 0.5s;
 }
 
-
 .navigator a:hover, .navigator a:focus, .navigator a:active{
     color: var(--dark-font-color);
     border-bottom:2px solid var(--dark-font-color);
@@ -107,27 +106,46 @@ main{
 
 figure{
     /* border: 1px solid #000; helper */
+    border-radius: 5px;
+    padding: 5px;
     margin: 0.5rem;
-    width:fit-content ;
+    transition: 0.5s;
+}
+
+figure ul{
+    font-size: 0.8rem;
+    width: 245px;
+    list-style: none;
+    text-align: center;
+    padding: 2px;
 }
 figure img{
     border-radius: 5px;
+    object-fit:cover;
     width: 250px;
-    height: 250px;
+    height: 200px;
 }
 figcaption{
     text-align: center;
+    font-size: 1.5rem;
 }
 figure:hover {
     transform: scale(1.02);
+    background-color: var(--secundary-background);
+    box-shadow: 5px 10px 10px var(--highlight-color2);
 }
 
-.figure-container{
+.bolden{
+    font-weight:900;
+}
+
+.img-container{
     /* border: 1px solid #000;  helper */
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     place-items: center;  
+    align-items: baseline;
     gap: 1rem;
 }
 

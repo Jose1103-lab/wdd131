@@ -16,7 +16,6 @@
     box-sizing: border-box;
 }
 
-
 /* ------------ general layout ---------- */
 
 body{
@@ -135,6 +134,7 @@ footer{
         margin: 50px;
         width:300px;
         text-align: left;
+        grid-row: 1/2;
         z-index: 1;
         filter: opacity(80%);
     }
@@ -150,14 +150,12 @@ footer{
 
     .weather-set{
         grid-column: 2/3;
-        grid-row: 1/2;
         justify-self: right;
         align-self: center;
     }
     
     .data-set{
         grid-column: 1/2;
-        grid-row: 1/2;
     }
 
     hr{
