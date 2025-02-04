@@ -83,43 +83,58 @@ const temples = [
   // Add more temple objects here...
 ];
 
+function ImagaCardCreator(selectedTemple) {
+  document.querySelector(".img-container").innerHTML = "";
+  selectedTemple.forEach(item => {
+    const container = document.querySelector(".img-container");
+    const figure = document.createElement("figure");
+    const caption = document.createElement("figcaption");
+    const image = document.createElement("img");
+    const list = document.createElement("ul");
+    const lItemDate = document.createElement("li");
+    const lItemArea = document.createElement("li");
+    const lItemLocation = document.createElement("li");
 
+    lItemDate.innerHTML = (`<span class="bolden">Dedicated:</span> ${item.dedicated}`);
+    lItemArea.innerHTML = (`<span class="bolden">Area:</span> ${item.area}`)
+    lItemLocation.innerHTML = (`<span class="bolden">Location:</span> ${item.location}`);
 
+    list.appendChild(lItemDate);
+    list.appendChild(lItemArea);
+    list.appendChild(lItemLocation);
 
-temples.forEach(item => {
-  const container = document.querySelector(".img-container");
-  const figure = document.createElement("figure");
-  const caption = document.createElement("figcaption");
-  const image = document.createElement("img");
-  const list = document.createElement("ul");
-  const lItemDate = document.createElement("li");
-  const lItemArea = document.createElement("li");
-  const lItemLocation = document.createElement("li");
+    image.setAttribute("src", `${item.imageUrl}`);
+    image.setAttribute("alt", `${item.templeName}`);
+    image.setAttribute("loading", "lazy");
+    image.width = "250";
+    image.height = "200";
 
-  lItemDate.innerHTML = (`<span class="bolden">Dedicated:</span> ${item.dedicated}`);
-  lItemArea.innerHTML = (`<span class="bolden">Area:</span> ${item.area}`)
-  lItemLocation.innerHTML = (`<span class="bolden">Location:</span> ${item.location}`);
+    caption.textContent = item.templeName;
+    caption.classList.add("rancho-regular");
+    list.classList.add("gabriela-regular");
 
-  list.appendChild(lItemDate);
-  list.appendChild(lItemArea);
-  list.appendChild(lItemLocation);
+    figure.appendChild(image);
+    figure.appendChild(caption);
+    figure.appendChild(list);
+    container.appendChild(figure);
+  });
+}
 
-  image.setAttribute("src", `${item.imageUrl}`);
-  image.setAttribute("alt", `${item.templeName}`);
-  image.setAttribute("loading", "lazy");
-  image.width = "250";
-  image.height = "200";
+ImagaCardCreator(temples)
+const home = document.querySelector("#home")
+home.addEventListener("click", () => {ImagaCardCreator(temples)})
 
-  caption.textContent = item.templeName;
-  caption.classList.add("rancho-regular");
-  list.classList.add("gabriela-regular");
+const old = document.querySelector("#old")
+old.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) < 1900))})
 
-  figure.appendChild(image);
-  figure.appendChild(caption);
-  figure.appendChild(list);
-  container.appendChild(figure);
-  console.log(item.area);
-});
+const newT = document.querySelector("#new")
+newT.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) > 2000))})
+
+const large = document.querySelector("#large")
+large.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.area) > 90000))})
+
+const small = document.querySelector("#small")
+small.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.area) < 10000))})
 
 
 const navigator = document.querySelector('.navigator');
