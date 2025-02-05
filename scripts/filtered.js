@@ -14,7 +14,7 @@ const temples = [
     dedicated: "2012, October, 28",
     area: 33000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+      "https://www.churchofjesuschrist.org/imgs/eafebe542f696c22dd64a03e622990b9a191c411/full/800%2C/0/default"
   },
   {
     templeName: "Aba Nigeria",
@@ -103,9 +103,9 @@ function ImagaCardCreator(selectedTemple) {
     list.appendChild(lItemArea);
     list.appendChild(lItemLocation);
 
+    image.setAttribute("loading", "lazy");
     image.setAttribute("src", `${item.imageUrl}`);
     image.setAttribute("alt", `${item.templeName}`);
-    image.setAttribute("loading", "lazy");
     image.width = "250";
     image.height = "200";
 
@@ -121,6 +121,7 @@ function ImagaCardCreator(selectedTemple) {
 }
 
 ImagaCardCreator(temples)
+
 const home = document.querySelector("#home")
 home.addEventListener("click", () => { ImagaCardCreator(temples) })
 
