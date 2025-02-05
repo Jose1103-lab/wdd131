@@ -6,7 +6,7 @@ const temples = [
     dedicated: "1836, March, 27",
     area: 15000,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1275-main.jpg"
+      "https://churchofjesuschrist.org/imgs/7cca181588ce3124341a861abfea65227419765c/full/500%2C/0/default"
   },
   {
     templeName: "Frankfurt Germany",
@@ -14,7 +14,7 @@ const temples = [
     dedicated: "2019, October, 20",
     area: 32895,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/frankfurt-germany-temple/frankfurt-germany-temple-6612.jpg"
+      "https://www.thechurchnews.com/resizer/v2/WW6OEZJLZXG4YFB5QEA6DCCOXY.jpg?auth=fdb314637bd0fbf052756a8aa24b898be8f5038fe50f7ac16365d87eccbfaec7&focal=0%2C0&width=840&height=555"
   },
   {
     templeName: "Calgary Alberta",
