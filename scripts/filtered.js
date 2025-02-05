@@ -1,14 +1,6 @@
 // DATASET FOR THE TEMPLES
 const temples = [
   {
-    templeName: "Kirtland Ohio",
-    location: "Kirtland, Ohio, United States",
-    dedicated: "1836, March, 27",
-    area: 15000,
-    imageUrl:
-      "https://churchofjesuschrist.org/imgs/7cca181588ce3124341a861abfea65227419765c/full/500%2C/0/default"
-  },
-  {
     templeName: "Frankfurt Germany",
     location: "Frankfurt, Germany",
     dedicated: "2019, October, 20",
@@ -46,7 +38,7 @@ const temples = [
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   },
   {
     templeName: "Yigo Guam",
@@ -62,7 +54,15 @@ const temples = [
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+  },
+  {
+    templeName: "Kirtland Ohio",
+    location: "Kirtland, Ohio, United States",
+    dedicated: "1836, March, 27",
+    area: 15000,
+    imageUrl:
+      "https://churchofjesuschrist.org/imgs/7cca181588ce3124341a861abfea65227419765c/full/500%2C/0/default"
   },
   {
     templeName: "Lima Perú",
@@ -122,19 +122,19 @@ function ImagaCardCreator(selectedTemple) {
 
 ImagaCardCreator(temples)
 const home = document.querySelector("#home")
-home.addEventListener("click", () => {ImagaCardCreator(temples)})
+home.addEventListener("click", () => { ImagaCardCreator(temples) })
 
 const old = document.querySelector("#old")
-old.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) < 1900))})
+old.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) < 1900)) })
 
 const newT = document.querySelector("#new")
-newT.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) > 2000))})
+newT.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) > 2000)) })
 
 const large = document.querySelector("#large")
-large.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.area) > 90000))})
+large.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.area) > 90000)) })
 
 const small = document.querySelector("#small")
-small.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.area) < 10000))})
+small.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.area) < 10000)) })
 
 
 const navigator = document.querySelector('.navigator');
