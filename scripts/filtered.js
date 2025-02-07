@@ -1,20 +1,12 @@
 // DATASET FOR THE TEMPLES
 const temples = [
   {
-    templeName: "Kirtland Ohio",
-    location: "Kirtland, Ohio, United States",
-    dedicated: "1836, March, 27",
-    area: 15000,
-    imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1275-main.jpg"
-  },
-  {
     templeName: "Frankfurt Germany",
     location: "Frankfurt, Germany",
     dedicated: "2019, October, 20",
     area: 32895,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/frankfurt-germany-temple/frankfurt-germany-temple-6612.jpg"
+      "https://www.thechurchnews.com/resizer/v2/WW6OEZJLZXG4YFB5QEA6DCCOXY.jpg?auth=fdb314637bd0fbf052756a8aa24b898be8f5038fe50f7ac16365d87eccbfaec7&focal=0%2C0&width=840&height=555"
   },
   {
     templeName: "Calgary Alberta",
@@ -22,7 +14,7 @@ const temples = [
     dedicated: "2012, October, 28",
     area: 33000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+      "https://www.churchofjesuschrist.org/imgs/eafebe542f696c22dd64a03e622990b9a191c411/full/800%2C/0/default"
   },
   {
     templeName: "Aba Nigeria",
@@ -46,7 +38,7 @@ const temples = [
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   },
   {
     templeName: "Yigo Guam",
@@ -62,7 +54,15 @@ const temples = [
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+  },
+  {
+    templeName: "Kirtland Ohio",
+    location: "Kirtland, Ohio, United States",
+    dedicated: "1836, March, 27",
+    area: 15000,
+    imageUrl:
+      "https://churchofjesuschrist.org/imgs/7cca181588ce3124341a861abfea65227419765c/full/500%2C/0/default"
   },
   {
     templeName: "Lima Perú",
@@ -103,9 +103,9 @@ function ImagaCardCreator(selectedTemple) {
     list.appendChild(lItemArea);
     list.appendChild(lItemLocation);
 
+    image.setAttribute("loading", "lazy");
     image.setAttribute("src", `${item.imageUrl}`);
     image.setAttribute("alt", `${item.templeName}`);
-    image.setAttribute("loading", "lazy");
     image.width = "250";
     image.height = "200";
 
@@ -121,20 +121,21 @@ function ImagaCardCreator(selectedTemple) {
 }
 
 ImagaCardCreator(temples)
+
 const home = document.querySelector("#home")
-home.addEventListener("click", () => {ImagaCardCreator(temples)})
+home.addEventListener("click", () => { ImagaCardCreator(temples) })
 
 const old = document.querySelector("#old")
-old.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) < 1900))})
+old.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) < 1900)) })
 
 const newT = document.querySelector("#new")
-newT.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) > 2000))})
+newT.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.dedicated.match(/\d+/g)[0]) > 2000)) })
 
 const large = document.querySelector("#large")
-large.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.area) > 90000))})
+large.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.area) > 90000)) })
 
 const small = document.querySelector("#small")
-small.addEventListener("click", () => {ImagaCardCreator(temples.filter(item => parseInt(item.area) < 10000))})
+small.addEventListener("click", () => { ImagaCardCreator(temples.filter(item => parseInt(item.area) < 10000)) })
 
 
 const navigator = document.querySelector('.navigator');
