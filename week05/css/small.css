@@ -49,6 +49,9 @@ main {
     min-height: 20rem;
 }
 /*----------- form --------------*/
+.required{
+    color: red;
+}
 .form1 fieldset{
     border:1px dashed #003f5a;
     margin: 2rem 0;
@@ -68,9 +71,12 @@ main {
     font-size: 0.8rem;
 }
 
-.required{
-    color: red;
+.form1 input[type="radio"],
+.form1 input[type="checkbox"]
+{
+    margin-right: 0.5rem;
 }
+
 
 .form1 input[type="text"],
 .form1 input[type="tel"],
@@ -82,13 +88,35 @@ main {
 .form1 input[type="url"],
 .form1 select
 {
+    appearance: none;
+    border: 1px solid #003f5a;
+    border-radius: 6px;
+    background-color: rgb(253, 253, 253);
     display: block;
-    background-color: rgb(191, 191, 191);
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+.form1 input[type="submit"]{
+    padding: 0.7rem;
+    width: 96%;
+    margin: -1rem 2% 2rem 2%;
+    max-width: 400px;
+    box-shadow: 1px 2px 5px aqua; 
 }
 
-
-
-
+.form1 input:required:focus
+{
+    border-bottom: 5px solid red;
+}
+.form1 input:required:valid
+{
+    border-bottom: 5px solid green;
+}
+label{
+    /* border: 1px solid red; */
+    max-width: 400px;
+}
 
 /*----------- FOOTER --------------*/
 footer {
