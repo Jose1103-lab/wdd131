@@ -48,6 +48,46 @@ main {
     padding: 0 2%;
     min-height: 20rem;
 }
+/*----------- form --------------*/
+.form1 fieldset{
+    border:1px dashed #003f5a;
+    margin: 2rem 0;
+    border-radius: 6px;
+    padding: 0.5rem 2%;
+}
+
+.form1 legend{
+    color: #00293a;
+    padding:0 .5rem;
+}
+
+.form1 label{
+    display: block;
+    padding-top:1rem ;
+    color: rgb(0, 52, 79);
+    font-size: 0.8rem;
+}
+
+.required{
+    color: red;
+}
+
+.form1 input[type="text"],
+.form1 input[type="tel"],
+.form1 input[type="email"],
+.form1 input[type="select"],
+.form1 input[type="number"],
+.form1 input[type="select"],
+.form1 input[type="date"],
+.form1 input[type="url"],
+.form1 select
+{
+    display: block;
+    background-color: rgb(191, 191, 191);
+}
+
+
+
 
 
 /*----------- FOOTER --------------*/
