@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Jose Brito">
+    <link rel="stylesheet" href="">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <title>Product Review</title>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <maim>
+        <div class="f-cont-rw">
+            <form method="get" action="review.html">
+                <label>Product name <span class="required">*</span>
+                    <select name="product" id="product" required>
+                        <option value="" disabled selected>-- SELECT --</option>
+                        <option value="">Laptop</option>
+                        0
+                    </select>
+                </label>
+
+                <div>Overall Rating</div>
+                <div class="radio-box"><label><input type="radio" name="rating" value="1">1&#9733;</label></div>
+                <div class="radio-box"><label><input type="radio" name="rating" value="2">2&#9733;</label></div>
+                <div class="radio-box"><label><input type="radio" name="rating" value="3">3&#9733;</label></div>
+                <div class="radio-box"><label><input type="radio" name="rating" value="4">4&#9733;</label></div>
+                <div class="radio-box"><label><input type="radio" name="rating" value="5">5&#9733;</label></div>
+
+                <label>Overall Rating<input type="date" required></label>
+
+                <div>What feature did you find useful in the product? <span>(Check all that apply)</span></div>
+                <label><input type="checkbox" value="">something</label>
+                <label><input type="checkbox" value="">something</label>
+                <label><input type="checkbox" value="">something</label>
+                <label><input type="checkbox" value="">something</label>
+                <label><input type="checkbox" value="">something</label>
+
+                <label>Written Review <span>(Optional)</span><textarea name="feedback" maxlength="200"></textarea></label>
+
+                <label>Your Name<span>(Optional)</span><input type="text" name="name"></label>
+
+                <input type="submit" value="Send Review">
+            </form>
+        </div>
+
+    </maim>
+
+    <footer>
+        <p class="copyr charm-regular">&copy;<span id="year"></span> Jose Brito | Santiago, Rep. Dom</p>
+        <p id="lastmod"></p>
+    </footer>
+</body>
+
+</html>
