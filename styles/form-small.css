@@ -2,11 +2,18 @@
     box-sizing: border-box;
 }
 
-.gabriela-regular {
-    font-family: "Gabriela", serif;
-    font-weight: 400;
+.ubuntu-light {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
     font-style: normal;
-}
+  }
+  
+  .ubuntu-bold {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
 
 body{
     margin: 0;
