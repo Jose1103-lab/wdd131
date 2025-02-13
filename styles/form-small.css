@@ -1,3 +1,11 @@
+:root{
+    --main-color:#eeeeee;
+    --primary-color:#001e33;
+    --secundary-color: #000000;
+    --light-fcolor: #ffffff;
+    --dark-fcolor: #00375f;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -6,9 +14,8 @@
     font-family: "Ubuntu", serif;
     font-weight: 300;
     font-style: normal;
-  }
-  
-  .ubuntu-bold {
+  }  
+.ubuntu-bold {
     font-family: "Ubuntu", serif;
     font-weight: 700;
     font-style: normal;
@@ -16,6 +23,7 @@
   
 
 body{
+    background-color: var(--primary-color);
     margin: 0;
     padding: 0;
     display: grid;
@@ -24,32 +32,37 @@ body{
 
 
 header{
-    background-color: rgb(230, 240, 165);
+    background-color: var(--primary-color);
     grid-area: 1/1/2/2;
 }
 
 header h1{
     text-align: center;
     width: 100%;
-    color: black;
+    color: var(--light-fcolor);
 }
 
 main{
     /* border: 1px solid red; */
     justify-self:center;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 800px;
     grid-area: 2/1/3/2;
 }
 
 .f-cont-rw{
+    width: 100%;
+    max-width: 500px;
+    place-self: center;
     margin: 1rem 2rem;
     padding: 10px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    background-color: rgb(235, 235, 235);
+    border-radius: 6px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 50px rgb(0, 225, 255);
+    /* border: 1px solid gray; */
     /* height: fit-content; */
-    /* box-shadow: 0 0 5px rgb(3, 10, 9); */
 }
 
 .f-cont-rw label{
@@ -74,16 +87,23 @@ main{
     height: 200px;
 }
 
+.f-cont-rw input[type=submit]:hover{
+    background-color: var(--secundary-color);
+    color: var(--light-fcolor);
+}
 .f-cont-rw input[type=submit]{
+    transition: 0.3s;
     margin-top: 10px;
+    max-width: 400px;
+    background-color: var(--main-color);   
+    color: var(--dark-fcolor);
 }
 
 .radio-box{
     display: inline-block;
     margin-right: 5px;
 }
-input[type=radio]
-{
+input[type=radio]{
     width: 15px;
     height: 15px;
     margin-right: 25px;
@@ -101,7 +121,7 @@ input[type=radio]
 
 footer{
     grid-area: 3/1/4/2;
-    background-color: rgb(60, 60, 70);
+    background-color: var(--secundary-color);
     text-align: center;
-    color:white;
+    color:var(--light-fcolor);
 }
