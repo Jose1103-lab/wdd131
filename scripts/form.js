@@ -27,7 +27,6 @@ const products = [
   ];
 
 // working with the dom =
-
 function optionGenertor(array){
     const optionSet = document.querySelector('#products');
     const newLocal = array.sort(); // extracting a sorted array to a new
@@ -40,19 +39,29 @@ function optionGenertor(array){
         //! console.log(element.name);
     });
 }
-
-const autReview = document.querySelector(".complete");
-
-const tester = autReview.textContent;
-
-console.log(autReview.innerHTML);
-
-if(tester === "Review Completed"){
-    let visits = Number(window.localStorage.getItem('visitAs')) || 0;
-    visits += 1;
-    localStorage.setItem('visitAs', visits);
-    console.log("done");
+// review counter
+function reviewCounter(){
+  const autReview = document.querySelector("title");
+  const tester = autReview.textContent;
+  // console.log(autReview.textContent); //test
+  if(tester.toLowerCase() === "thanks for your review"){
+      let visits = Number(window.localStorage.getItem('visitAs')) || 0;
+      visits += 1;
+      localStorage.setItem('visitAs', visits);
+      // console.log("done"); //test
+      return visits; //! return the number of visits to be saved in the server storage
+  }
 }
-optionGenertor(products);
+
+try {
+  reviewCounter();
+} catch (error) {
+  console.log('>_ visit counter failed, it only works on the review page');
+}
+try {
+  optionGenertor(products);
+} catch (error) {
+  console.log('>_ options generator failed, it only works on the main page');
+}
 
 
