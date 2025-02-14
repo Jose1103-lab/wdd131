@@ -20,7 +20,7 @@
 <body>
     <header>
         <div>
-            <h1 class="ubuntu-bold">Product Review</h1>
+            <h1 class="ubuntu-bold complete">Review Completed</h1>
         </div>
     </header>
 
@@ -28,32 +28,31 @@
         <div class="f-cont-rw">
 
             <form method="get" action="review.html" id="prod-form">
-                <label class="ubuntu-bold">Product name <span class="required ubuntu-bold">*</span>
+                <label class="ubuntu-bold">Product name <span class="required ubuntu-bold">(Required)</span>
                     <select name="product" id="products" required>
                         <option value="" disabled selected>-- SELECT --</option>
-                        <option value="laptop">Laptop</option>
                     </select>
                 </label>
 
-                <div class="ubuntu-bold set-separator">Overall Rating
+                <div class="ubuntu-bold set-separator">Overall Rating <span class="required ubuntu-bold">(Required)</span>
                     <div class="ubuntu-light radios-cont">
-                        <div class="radio-box"><label>1&star;<input type="radio" name="rating" value="1" required></label></div>
-                        <div class="radio-box"><label>2&star;<input type="radio" name="rating" value="2" required></label></div>
-                        <div class="radio-box"><label>3&star;<input type="radio" name="rating" value="3" required></label></div>
-                        <div class="radio-box"><label>4&star;<input type="radio" name="rating" value="4" required></label></div>
-                        <div class="radio-box"><label>5&star;<input type="radio" name="rating" value="5" required></label></div>
+                        <div class="radio-box"><label>1&star;<input type="radio" name="rating" value="1" id="rating-1" required></label></div>
+                        <div class="radio-box"><label>2&star;<input type="radio" name="rating" value="2" id="rating-2" required></label></div>
+                        <div class="radio-box"><label>3&star;<input type="radio" name="rating" value="3" id="rating-3" required></label></div>
+                        <div class="radio-box"><label>4&star;<input type="radio" name="rating" value="4" id="rating-4" required></label></div>
+                        <div class="radio-box"><label>5&star;<input type="radio" name="rating" value="5" id="rating-5" required></label></div>
                     </div>
                 </div>
 
-                <label class="ubuntu-bold">Date of installation <span class="required ubuntu-bold">*</span><input type="date" required></label>
+                <label class="ubuntu-bold">Date of installation <span class="required ubuntu-bold">(Required)</span><input type="date" id="date" required></label>
 
                 <div class="ubuntu-bold set-separator">What feature did you find useful in the product <span class="ubuntu-light">(Check all that apply)</span>
                     <div class="ubuntu-light">
-                        <label><input type="checkbox" value="design">Design</label>
-                        <label><input type="checkbox" value="efficiency">Efficiency</label>
-                        <label><input type="checkbox" value="ease">Ease of Use</label>
-                        <label><input type="checkbox" value="performance">Performance</label>
-                        <label><input type="checkbox" value="durability">Durability</label>
+                        <label><input type="checkbox" name="feature" value="design" id="feature-design">Design</label>
+                        <label><input type="checkbox" name="feature" value="efficiency" id="feature-efficiency">Efficiency</label>
+                        <label><input type="checkbox" name="feature" value="ease" id="feature-ease">Ease of Use</label>
+                        <label><input type="checkbox" name="feature" value="performance" id="feature-performance">Performance</label>
+                        <label><input type="checkbox" name="feature" value="durability" id="feature-durability">Durability</label>
                     </div>
                 </div>
 
