@@ -68,7 +68,6 @@ main{
 
 form input:required:invalid{
     border-right:5px solid red;
-    background-color: red;
 }
 
 form input:required:valid:focus{
@@ -80,6 +79,7 @@ form input:required:valid:focus{
 .f-cont-rw input[type=text],
 .f-cont-rw input[type=submit],
 .f-cont-rw input[type=date]{
+    appearance: none;
     display: block;
     margin: 0.5rem 0 1.5rem 0;
     width: 100%;

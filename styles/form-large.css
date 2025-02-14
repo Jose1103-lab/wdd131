@@ -13,4 +13,8 @@
         color: var(--light-fcolor);
     }
 
+    input{
+        font-size: .5rem;
+    }
+
 }
