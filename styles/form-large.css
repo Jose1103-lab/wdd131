@@ -12,5 +12,16 @@
         background-color: var(--secundary-color);
         color: var(--light-fcolor);
     }
+    input,
+    textarea,
+    select {
+        font-size: 1rem;
+        background-color: var(--light-fcolor);
+    }
+
+    .final-page{
+        max-width: 300px;
+        padding: 2rem 2rem;
+    }
 
 }

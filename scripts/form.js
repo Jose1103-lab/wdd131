@@ -16,8 +16,7 @@ let products = [
     "Raspberry Pi 4"
 ]; 
 
-// working with the dom 
-
+// working with the dom =
 function optionGenertor(array){
     const optionSet = document.querySelector('#products');
     const newLocal = array.sort(); // extracting a sorted array to a new
@@ -26,7 +25,7 @@ function optionGenertor(array){
         nItem.textContent = element;
         nItem.setAttribute("value", element.toLowerCase())    
         optionSet.appendChild(nItem);
-        console.log(element);
+        //! console.log(element);
     });
 }
 

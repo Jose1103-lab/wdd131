@@ -28,7 +28,7 @@
         <div class="f-cont-rw">
 
             <form method="get" action="review.html" id="prod-form">
-                <label class="ubuntu-bold">Product name <span class="required">*</span>
+                <label class="ubuntu-bold">Product name <span class="required ubuntu-bold">*</span>
                     <select name="product" id="products" required>
                         <option value="" disabled selected>-- SELECT --</option>
                         <option value="laptop">Laptop</option>
@@ -36,24 +36,24 @@
                 </label>
 
                 <div class="ubuntu-bold set-separator">Overall Rating
-                    <div class="ubuntu-light">
-                        <div class="radio-box"><label>1&star;<input type="radio" name="rating" value="1"></label></div>
-                        <div class="radio-box"><label>2&star;<input type="radio" name="rating" value="2"></label></div>
-                        <div class="radio-box"><label>3&star;<input type="radio" name="rating" value="3"></label></div>
-                        <div class="radio-box"><label>4&star;<input type="radio" name="rating" value="4"></label></div>
-                        <div class="radio-box"><label>5&star;<input type="radio" name="rating" value="5"></label></div>
+                    <div class="ubuntu-light radios-cont">
+                        <div class="radio-box"><label>1&star;<input type="radio" name="rating" value="1" required></label></div>
+                        <div class="radio-box"><label>2&star;<input type="radio" name="rating" value="2" required></label></div>
+                        <div class="radio-box"><label>3&star;<input type="radio" name="rating" value="3" required></label></div>
+                        <div class="radio-box"><label>4&star;<input type="radio" name="rating" value="4" required></label></div>
+                        <div class="radio-box"><label>5&star;<input type="radio" name="rating" value="5" required></label></div>
                     </div>
                 </div>
 
-                <label class="ubuntu-bold">Date of installation<span class="required">*</span><input type="date" required></label>
+                <label class="ubuntu-bold">Date of installation <span class="required ubuntu-bold">*</span><input type="date" required></label>
 
                 <div class="ubuntu-bold set-separator">What feature did you find useful in the product <span class="ubuntu-light">(Check all that apply)</span>
                     <div class="ubuntu-light">
-                        <label><input type="checkbox" value="">something</label>
-                        <label><input type="checkbox" value="">something</label>
-                        <label><input type="checkbox" value="">something</label>
-                        <label><input type="checkbox" value="">something</label>
-                        <label><input type="checkbox" value="">something</label>
+                        <label><input type="checkbox" value="design">Design</label>
+                        <label><input type="checkbox" value="efficiency">Efficiency</label>
+                        <label><input type="checkbox" value="ease">Ease of Use</label>
+                        <label><input type="checkbox" value="performance">Performance</label>
+                        <label><input type="checkbox" value="durability">Durability</label>
                     </div>
                 </div>
 

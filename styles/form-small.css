@@ -80,6 +80,7 @@ form input:required:valid:focus{
 .f-cont-rw input[type=submit],
 .f-cont-rw input[type=date]{
     appearance: none;
+    font-size: 1rem;
     display: block;
     margin: 0.5rem 0 1.5rem 0;
     width: 100%;
@@ -110,6 +111,11 @@ input[type=radio]{
     display: block;
 }
 
+.radios-cont{
+    display: flex;
+    justify-content: space-around;
+}
+
 .set-separator{
     margin-bottom:1.5rem ;
 }
@@ -118,18 +124,18 @@ input[type=radio]{
     height: 200px;
 }
 
-.radio-box{
-    display: inline-block;
-    margin-right: 5px;
-}
+/* .radio-box{
+    display: grid;    
+    justify-content: center;
+} */
 
 .required{
-    color: red;
+    color: rgb(103, 0, 0);
     font-size: 0.8rem;
 }
 
 .opt{
-    color: green;
+    color: rgb(23, 99, 0);
     font-size: 0.7rem;
 }
 
