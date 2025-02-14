@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A form for submitting product reviews.">
     <meta name="author" content="Jose Brito">
+    <link rel="icon" href="images/form-logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/form-small.css">
     <link rel="stylesheet" href="styles/form-large.css">
     <script src="scripts/getdates.js" defer></script>
@@ -25,35 +26,43 @@
 
     <main class="ubuntu-light">
         <div class="f-cont-rw">
+
             <form method="get" action="review.html">
-                <label>Product name <span class="required">*</span>
+                <label class="ubuntu-bold">Product name <span class="required">*</span>
                     <select name="product" id="product" required>
                         <option value="" disabled selected>-- SELECT --</option>
-                        <option value="">Laptop</option>
+                        <option value="laptop">Laptop</option>
                     </select>
                 </label>
 
-                <div>Overall Rating</div>
-                <div class="radio-box"><label>1&star;<input type="radio" name="rating" value="1"></label></div>
-                <div class="radio-box"><label>2&star;<input type="radio" name="rating" value="2"></label></div>
-                <div class="radio-box"><label>3&star;<input type="radio" name="rating" value="3"></label></div>
-                <div class="radio-box"><label>4&star;<input type="radio" name="rating" value="4"></label></div>
-                <div class="radio-box"><label>5&star;<input type="radio" name="rating" value="5"></label></div>
+                <div class="ubuntu-bold set-separator">Overall Rating
+                    <div class="ubuntu-light">
+                        <div class="radio-box"><label>1&star;<input type="radio" name="rating" value="1"></label></div>
+                        <div class="radio-box"><label>2&star;<input type="radio" name="rating" value="2"></label></div>
+                        <div class="radio-box"><label>3&star;<input type="radio" name="rating" value="3"></label></div>
+                        <div class="radio-box"><label>4&star;<input type="radio" name="rating" value="4"></label></div>
+                        <div class="radio-box"><label>5&star;<input type="radio" name="rating" value="5"></label></div>
+                    </div>
+                </div>
 
-                <label>Date of installation<span class="required">*</span><input type="date" required></label>
+                <label class="ubuntu-bold">Date of installation<span class="required">*</span><input type="date" required></label>
 
-                <div>What feature did you find useful in the product? <span>(Check all that apply)</span></div>
-                <label><input type="checkbox" value="">something</label>
-                <label><input type="checkbox" value="">something</label>
-                <label><input type="checkbox" value="">something</label>
-                <label><input type="checkbox" value="">something</label>
-                <label><input type="checkbox" value="">something</label>
+                <div class="ubuntu-bold set-separator">What feature did you find useful in the product <span class="ubuntu-light">(Check all that apply)</span>
+                    <div class="ubuntu-light">
+                        <label><input type="checkbox" value="">something</label>
+                        <label><input type="checkbox" value="">something</label>
+                        <label><input type="checkbox" value="">something</label>
+                        <label><input type="checkbox" value="">something</label>
+                        <label><input type="checkbox" value="">something</label>
+                    </div>
+                </div>
 
-                <label>Written Review <span class="opt">(Optional)</span><textarea name="feedback" maxlength="200" placeholder="I feel like this product is..."></textarea></label>
+                <label class="ubuntu-bold">Written Review <span class="opt">(Optional)</span><textarea name="feedback"
+                        maxlength="200" placeholder="I feel like this product is..."></textarea></label>
 
-                <label>Your Name <span class="opt">(Optional)</span><input type="text" name="name"></label>
-
-                <input type="submit" value="Send Review">
+                <label class="ubuntu-bold">Your Name <span class="opt">(Optional)</span><input type="text"
+                        name="name" ></label>
+                <input type="submit" value="Send Review" class="ubuntu-bold">
             </form>
         </div>
 
@@ -63,6 +72,6 @@
         <p class="copyr charm-regular">&copy;<span id="year"></span> Jose Brito | Santiago, Rep. Dom</p>
         <p id="lastmod"></p>
     </footer>
-</body>
 
+</body>
 </html>

@@ -20,7 +20,6 @@
     font-weight: 700;
     font-style: normal;
   }
-  
 
 body{
     background-color: var(--primary-color);
@@ -29,7 +28,6 @@ body{
     display: grid;
     grid-template:1fr auto 0.5fr / 1fr;
 }
-
 
 header{
     background-color: var(--primary-color);
@@ -43,7 +41,6 @@ header h1{
 }
 
 main{
-    /* border: 1px solid red; */
     justify-self:center;
     display: flex;
     flex-direction: column;
@@ -54,15 +51,13 @@ main{
 
 .f-cont-rw{
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     place-self: center;
     margin: 1rem 2rem;
-    padding: 10px;
+    padding: 1rem 2rem;
     border-radius: 6px;
     background-color: var(--main-color);
     box-shadow: 0 0 50px rgb(0, 225, 255);
-    /* border: 1px solid gray; */
-    /* height: fit-content; */
 }
 
 .f-cont-rw label{
@@ -70,21 +65,28 @@ main{
     display: block;
     font-size: 1rem;
 }
+
+form input:required:invalid{
+    border-right:5px solid red;
+    background-color: red;
+}
+
+form input:required:valid:focus{
+    border-right:5px solid green;
+}
+
 .f-cont-rw textarea,
 .f-cont-rw select,
 .f-cont-rw input[type=text],
 .f-cont-rw input[type=submit],
 .f-cont-rw input[type=date]{
-    width: 100%;
     display: block;
+    margin: 0.5rem 0 1.5rem 0;
+    width: 100%;
     max-width: 700px;
     padding: 10px;
-    border-radius: 5px;
     border: 1px solid rgb(205, 205, 205);
-}
-
-.f-cont-rw textarea{
-    height: 200px;
+    border-radius: 5px;
 }
 
 .f-cont-rw input[type=submit]:hover{
@@ -92,28 +94,40 @@ main{
     color: var(--light-fcolor);
 }
 .f-cont-rw input[type=submit]{
-    transition: 0.3s;
-    margin-top: 10px;
-    max-width: 400px;
     background-color: var(--main-color);   
     color: var(--dark-fcolor);
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 0  5px var(--dark-fcolor);
+    border: none;
+    transition: 0.3s;
+}
+
+input[type=radio]{
+    margin: 0  25px 0 0;
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.set-separator{
+    margin-bottom:1.5rem ;
+}
+
+.f-cont-rw textarea{
+    height: 200px;
 }
 
 .radio-box{
     display: inline-block;
     margin-right: 5px;
 }
-input[type=radio]{
-    width: 15px;
-    height: 15px;
-    margin-right: 25px;
-    display: block;
-}
 
 .required{
     color: red;
     font-size: 0.8rem;
 }
+
 .opt{
     color: green;
     font-size: 0.7rem;
@@ -122,6 +136,7 @@ input[type=radio]{
 footer{
     grid-area: 3/1/4/2;
     background-color: var(--secundary-color);
+    font-size: 0.7rem;
     text-align: center;
     color:var(--light-fcolor);
 }
