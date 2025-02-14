@@ -44,7 +44,7 @@ function reviewCounter(){
   const autReview = document.querySelector("title");
   const tester = autReview.textContent;
   // console.log(autReview.textContent); //test
-  if(tester.toLowerCase() === "thanks for your review"){
+  if(tester.toLowerCase() === "thanks for your review"){ //this condition validates the page to count 
       let visits = Number(window.localStorage.getItem('visitAs')) || 0;
       visits += 1;
       localStorage.setItem('visitAs', visits);
