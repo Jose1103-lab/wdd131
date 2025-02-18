@@ -1,26 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
-    <meta decription="">
-    <meta author="">
-    <link rel="stylesheet" href="scripts/base.css">
-    <link rel="icon href="images/logo.">
-    <style>
-        h1{
-            text-align: center;
-            text-shadow: 0 0 10px rgb(123, 123, 123); 
-            color:rgba(92, 149, 66, 0.803);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-    </style>
+    <meta name="decription" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="style/base-small.css">
+    <link rel="stylesheet" href="style/base-large.css">
+    <link rel="icon" href="images/logo-done1.webp" type="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Faculty+Glyphic&display=swap"
+        rel="stylesheet">
+    <script src="scripts/base.js" defer></script>
+    <title>Tecno Tech</title>
+    <meta name="author" content="Jose Brito">
 </head>
-<body bgcolor="#f0f0f0">
+
+<body>
     <header>
-        <h1>Coming soon</h1>
+        <div>
+            <img src="images/logo-done1.webp" alt="tecno tech logo" loading="lazy" width="75">
+            <h1>Tecno Tech</h1>
+        </div>
+
+        <nav class="link-bar">
+            <a href="products.html">Products</a>
+            <a href="contact.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
     </header>
-    
+
+    <main>
+        <div class="hero">
+            <!-- for a background solid image -->
+            <picture>
+                <source srcset="images/desktop.webp" media="(max-width:700px)">
+                <img src="images/fondo-hero.webp" alt="hero image" loading="lazy" width="500">
+            </picture>
+            <div class="hr-txt-cont">
+                <h1>We create impactful experiences<br>for your customers</h1>
+                <p>Your website, business, and brand deserves to be seen. Let's make it happen! </p>
+
+                <button type="button">Meet with our Experts</button>
+            </div>
+
+            <div class="hr-img-cont">
+                <!-- for a team representing image -->
+                <img src="images/webexample.webp" alt="team image" loading="lazy" width="600">
+
+            </div>
+        </div>
+
+        <div class="main-content">
+            <section class="fir-sect">
+                <img src="images/web-design.webp" alt="website image" loading="lazy">
+                <div>
+                    <h2>Why Does Your Business Deserve a Web Page?</h2>
+                    <p>In today’s digital world, having a web presence isn’t a luxury it’s a necessity. A website acts
+                        as your 24/7 storefront, helping you attract customers, build credibility, and grow your brand.
+                        Whether you're a startup, a local business, or an established company, an online presence
+                        ensures you never miss an opportunity. Let’s create a website that works for you!</p>
+                </div>
+            </section>
+
+            <section class="sec-sect">
+                <h2>Our Repository<hr></h2>
+                
+                <!-- what is below is a template -->
+                <div class="site-view">
+                    <figure>
+                        <img src="images/news-web.webp" alt="site preview" loading="lazy">
+                        <figcaption>The Title</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/news-web.webp" alt="site preview" loading="lazy">
+                        <figcaption>The Title</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/news-web.webp" alt="site preview" loading="lazy">
+                        <figcaption>The Title</figcaption>
+                    </figure>
+
+                </div>
+
+                <button type="button">See More Projects</button>
+            </section>
+
+            <section class="thir-sect">
+                <h2>Our Areas of Expertise<hr></h2>
+                <div class="icon-label">
+                    <img src="images/react.webp" alt="tech icon" loading="lazy" width="50" height="50">
+                    <img src="images/sql.png" alt="tech icon" loading="lazy" width="70" height="50">
+                    <img src="images/node.webp" alt="tech icon" loading="lazy" width="70" height="50">
+                    <img src="images/pip.webp" alt="tech icon" loading="lazy" width="50" height="50">
+                    <img src="images/vue.webp" alt="tech icon" loading="lazy" width="50" height="50">
+                </div>
+            </section>
+
+
+            <section class="forth-sect">
+                <div>
+                    <h2>When Should You Consider Having a Website?</h2>
+                    <ul>
+                        <li>You Want to Build Credibility.</li>
+                        <li>Your Customers Search Online.</li>
+                        <li>You Want to Expand Your Reach.</li>
+                        <li>You Need a 24/7 Marketing Tool.</li>
+                        <li>Your Competitors Have One.</li>
+                        <li>You Want to Sell Products or Services Online.</li>
+                        <li>You Need a Central Hub for Your Brand.</li>
+                    </ul>
+                </div>
+                <img src="images/connection.webp" alt="world" loading="lazy" width="500">
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <img src="images/logo-done-full.webp" alt="logo" width="225">
+        <div class="joiner">
+            <div class="ft-contact">
+                <h3>Do you like what you see?</h3>
+                <button type="button">Contact Us</button>
+            </div>
+            <div class="net-contact">
+                <h3>More about Tecno Tech?</h3>
+                <!-- social network icons links  -->
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="images/inblue.png" alt="LinkedIn" loading="lazy" width="30" height="30"></a>
+                    <a href="#" target="_blank"><img src="images/yblue.png" alt="youtube" loading="lazy" width="30" height="30"></a>
+                    <a href="#" target="_blank"><img src="images/igblue.png" alt="instagram" loading="lazy" width="30" height="30"></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- make the year dynamic -->
+        <p>&copy;<span id="year">2025</span> All Right Reserved - Tecno Tech</p>
+    </footer>
+
 </body>
+
 </html>
