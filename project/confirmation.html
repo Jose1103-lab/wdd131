@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tecno Tech - Your go-to source for the latest in technology and gadgets.">
-    <meta name="keywords" content="Tecno Tech, technology, gadgets, electronics, tech news">
-    <meta name="keywords" content="">
-    <link rel="icon" href="images/logo-done1.webp" type="icon">
+    <meta name="description" content="Confirmation Page for the contact form.">
+    <meta name="keywords" content="Tecno Tech, websites, design, etc">
+    <link rel="icon" href="images/logo-done1.webp" type="image/wedp">
     <link rel="stylesheet" href="style/base-large.css">
     <link rel="stylesheet" href="style/base-small.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,18 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Faculty+Glyphic&display=swap"
         rel="stylesheet">
     <script src="scripts/base.js" defer></script>
-    <title>Tecno Tech | Information</title>
+    <title>Request sent</title>
     <meta name="author" content="Jose Brito">
 </head>
 
-<body>
+<body id="form-completed">
     <header>
         <div class="logo">
             <img src="images/logo-done1.webp" alt="tecno tech logo" loading="lazy" width="75">
             <h1>Tecno Tech</h1>
         </div>
 
-        <div class="menu-toggle" onclick="toggleMenu()"></div>
+        <div class="menu-toggle" id="toggler"></div>
         <nav class="link-bar" id="menu">
             <a id="home" href="final_project.html">Home</a>
             <a id="products" href="products.html">Products</a>
@@ -39,7 +38,7 @@
         <div class="main-content">
             <section class="conf-container">
                 <div>
-                    <img src="images/check.png" alt="confirmation" width="150">
+                    <img src="images/check.png" alt="confirmation" loading="lazy" width="150">
                     <h2>
                         Thank You<br>Message Sent</h2>
                 </div>
@@ -49,7 +48,7 @@
     </main>
 
     <footer>
-        <img src="images/logo-done1.webp" alt="logo" width="150">
+        <img src="images/logo-done1.webp" alt="logo" loading="lazy" width="150">
         <div class="joiner">
             <div class="ft-contact">
                 <h3>Do you like what you see?</h3>
@@ -59,19 +58,19 @@
                 <h3>More about Tecno Tech?</h3>
                 <!-- social network icons links  -->
                 <div class="social-icons">
-                    <a href="#" target="_blank"><img src="images/inblue.png" alt="LinkedIn" loading="lazy" width="30"
+                    <a href="https://www.linkedin.com/in/jose-a-b-8885052b1/" target="_blank"><img src="images/inblue.png" alt="LinkedIn" loading="lazy" width="30"
                             height="30"></a>
-                    <a href="#" target="_blank"><img src="images/yblue.png" alt="youtube" loading="lazy" width="30"
+                    <a href="https://www.youtube.com/@ThePrimeTimeagen" target="_blank"><img src="images/yblue.png" alt="youtube" loading="lazy" width="30"
                             height="30"></a>
-                    <a href="#" target="_blank"><img src="images/igblue.png" alt="instagram" loading="lazy" width="30"
+                    <a href="https://www.instagram.com/jose_santana001/" target="_blank"><img src="images/igblue.png" alt="instagram" loading="lazy" width="30"
                             height="30"></a>
                 </div>
             </div>
 
         </div>
         <!-- make the year dynamic -->
-        <p>&copy;<span id="year">2025</span> All Right Reserved - Tecno Tech</p>
+        <p>&copy;<span id="year"></span> All Right Reserved - Tecno Tech</p>
     </footer>
-    </body=>
+    </body>
 
 </html>

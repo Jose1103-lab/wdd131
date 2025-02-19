@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="decription" content="">
     <meta name="description" content="Tecno Tech - Creating impactful web experiences for your customers. Your website, business, and brand deserve to be seen. Let's make it happen!">
     <meta name="keywords" content="web development, web design, business website, online presence, web solutions, Tecno Tech">
+    <link rel="icon" href="images/logo-done1.webp" type="image/wedp">
     <link rel="stylesheet" href="style/base-large.css">
     <link rel="stylesheet" href="style/base-small.css">
-    <link rel="icon" href="images/logo-done1.webp" type="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Faculty+Glyphic&display=swap"
@@ -26,7 +25,7 @@
             <h1>Tecno Tech</h1>
         </div>
 
-        <div class="menu-toggle" onclick="toggleMenu()"></div>
+        <div class="menu-toggle" id="toggler"></div>
         <nav class="link-bar" id="menu">
             <a id="home" href="final_project.html">Home</a>
             <a id="products" href="products.html">Products</a>
@@ -69,31 +68,18 @@
             </section>
 
             <section class="sec-sect">
-
-                <h2>Our Repository<hr></h2>
-                
-                <!-- what is below is a template -->
-                <div class="site-view">
-                    <figure>
-                        <img src="images/news-web.webp" alt="site preview" loading="lazy">
-                        <figcaption>The Title</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/news-web.webp" alt="site preview" loading="lazy">
-                        <figcaption>The Title</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/news-web.webp" alt="site preview" loading="lazy">
-                        <figcaption>The Title</figcaption>
-                    </figure>
-                    
-                    <button type="button" class="bt-centered" onclick="location.href='products.html';">See More Designs</button>
+                <h2>Our Repository</h2>
+                <hr>
+                <div id="home-prev" class="site-view">
+                    <!-- what is below is a template -->
                 </div>
+                <button type="button" class="bt-centered" onclick="location.href='products.html';">See More Designs</button>
 
             </section>
 
             <section class="thir-sect">
-                <h2>Our Areas of Expertise<hr></h2>
+                <h2>Our Areas of Expertise</h2>
+                <hr>
                 <div class="icon-label">
                     <img src="images/react.webp" alt="tech icon" loading="lazy" width="50" height="50">
                     <img src="images/sql.png" alt="tech icon" loading="lazy" width="70" height="50">
@@ -122,11 +108,14 @@
 
             <section id="about-us">
                 <div class="fir-sect-abt">    
-                    <h2>Our Mission<hr></h2>
+                    <h2>Our Mission</h2>
+                    <hr>
                     <p>To empower businesses with innovative web solutions that enhance their online presence and drive growth. We are committed to crafting user-friendly, visually appealing, and functional websites that meet our clients' unique needs.</p>
-                    <h2>Our Vision<hr></h2>
+                    <h2>Our Vision</h2>
+                    <hr>
                     <p>To be the leading web development agency recognized for its creative solutions, technical excellence, and unwavering commitment to client satisfaction. We strive to continuously innovate and adapt to the evolving digital landscape, helping our clients achieve their online goals.</p>
-                    <h2>Our Values<hr></h2>
+                    <h2>Our Values</h2>
+                    <hr>
                     <p class="core">Innovation, Collaboration, Quality, Integrity, and Customer Focus.</p>
                 </div>
             </section>              
@@ -145,17 +134,20 @@
                 <h3>More about Tecno Tech?</h3>
                 <!-- social network icons links  -->
                 <div class="social-icons">
-                    <a href="#" target="_blank"><img src="images/inblue.png" alt="LinkedIn" loading="lazy" width="30" height="30"></a>
-                    <a href="#" target="_blank"><img src="images/yblue.png" alt="youtube" loading="lazy" width="30" height="30"></a>
-                    <a href="#" target="_blank"><img src="images/igblue.png" alt="instagram" loading="lazy" width="30" height="30"></a>
+                    <a href="https://www.linkedin.com/in/jose-a-b-8885052b1/" target="_blank"><img src="images/inblue.png" alt="LinkedIn" loading="lazy" width="30"
+                            height="30"></a>
+                    <a href="https://www.youtube.com/@ThePrimeTimeagen" target="_blank"><img src="images/yblue.png" alt="youtube" loading="lazy" width="30"
+                            height="30"></a>
+                    <a href="https://www.instagram.com/jose_santana001/" target="_blank"><img src="images/igblue.png" alt="instagram" loading="lazy" width="30"
+                            height="30"></a>
                 </div>
             </div>
 
         </div>
         <!-- make the year dynamic -->
-        <p>&copy;<span id="year">2025</span> All Right Reserved - Tecno Tech</p>
+        <p>&copy;<span id="year"></span> All Right Reserved - Tecno Tech</p>
     </footer>
-
+ 
 </body>
 
 </html>
