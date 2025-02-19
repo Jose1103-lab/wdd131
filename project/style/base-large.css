@@ -305,7 +305,8 @@ button:hover {
 
 .contact-form{
     padding: 10px;
-    width:410px;
+    width: 100%;
+    max-width:410px;
 
 }
 .contact-form h2{
@@ -348,9 +349,12 @@ button:hover {
     text-align: center;
     font-size: 1rem;
 }
+.info-container div img{
+    width: 90%;
+} 
 .info-container div{
     place-self: center;
-    width: 100%;
+    width: 80%;
     max-width: 250px;
 }
 
