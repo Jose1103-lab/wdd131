@@ -10,6 +10,30 @@
 * {
     box-sizing: border-box;
 }
+.menu-toggle {
+    color: var(--oxford-blue);
+    display: block;
+    padding: 10px;
+}
+.link-bar {
+    display: flex;
+    position: absolute ;
+    right: 25px;
+    justify-content: space-around;
+    padding: 10px;
+}
+.link-bar a {
+    border-bottom: 3px solid #ffffff00;
+    text-decoration: none;
+    margin: 10px 30px;
+    transition: .5s;
+    color: var(--oxford-blue);
+    padding: 10px;
+}
+
+.link-bar a:hover {
+    border-bottom: 3px solid var(--orange-web);
+} 
 
 hr {
     border: 1px solid var(--orange-web);
@@ -33,48 +57,34 @@ h6 {
 
 p,
 a,
+label,
 li,
+input,
+textarea,
+select,
+option,
 figcaption,
 button {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 900;
     font-size: 1.2rem;
 }
-
 /* --------------header stuff--------------- */
 header {
-    z-index: 2;
-    box-shadow: 5px -5px 10px 10px var(--white);
+    background-color: var(--white);
+    box-shadow: 5px -5px 5px 5px var(--orange-web);
     color: var(--oxford-blue);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     place-items: center;
+    margin-bottom: 2px;
 }
 
-.link-bar {
-    grid-area: 1/2/2/3;
-    display: flex;
-    flex-flow: row nowrap;
-}
 
-.link-bar a {
-    text-decoration: none;
-    margin: 10px 30px;
-    font-size: 1.3rem;
-    border-bottom: 3px solid var(--white);
-    color: var(--oxford-blue);
-    transition: .5s;
-}
-
-.link-bar a:hover {
-    border-bottom: 3px solid var(--orange-web);
-}
-
-header div {
+header .logo {
     display: flex;
     place-items: center;
 }
-
 /* ------------------main stuff---------------- */
 main {
     display: grid;
@@ -83,7 +93,6 @@ main {
 }
 
 .mainp {
-    z-index: -1;
     background-color: var(--platinum);
 }
 
@@ -97,7 +106,6 @@ main .hero {
 
 .hero picture {
     grid-area: 1/1/2/3;
-    z-index: -1;
 }
 
 .hero picture img {
@@ -154,7 +162,6 @@ main .main-content {
     text-align: center;
     margin-top: 35px;
 }
-
 .fir-sect-abt .core {
     text-align: center;
 }
@@ -167,6 +174,7 @@ main .main-content {
 }
 
 .fir-sect img {
+    order: 2;
     grid-column: 1/2;
     width: 100%;
 }
@@ -243,6 +251,7 @@ button {
     border: none;
     padding: 10px 25px;
     margin-left: 5%;
+    max-width: fit-content;
     font-size: 1rem;
     border-radius: 25px;
     transition: 0.1s ease-in-out;
@@ -265,8 +274,12 @@ button:hover {
 .hook a {
     text-decoration: none;
     color: var(--orange-web);
-    border-bottom: 1px solid var(--orange-web);
+    border-bottom: 1px solid var(#ffffff00);
     font-size: 2rem;
+}
+
+.hook a:hover{
+    border-bottom: 1px solid var(--orange-web);
 }
 
 .hero2 {
@@ -288,6 +301,85 @@ button:hover {
     color: var(--platinum);
     width: 100%;
     padding: 0 20px;
+}
+
+.contact-form{
+    padding: 10px;
+    width:410px;
+
+}
+.contact-form h2{
+    text-align: center;
+    color: var(--orange-web);
+}
+.contact-form label{
+    margin-left: 5px;
+}
+.required{
+    color: red;
+    font-size: 0.9rem;
+}
+
+.contact-form textarea{
+    height: 100px;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form select,option{
+    font-size: 1rem;
+    display: block;
+    max-width: 500px;
+    border: 1px solid var(--oxford-blue); 
+    border-radius: 5px;
+    background-color: var(--platinum);
+    width: 100%;
+    padding: 10px; 
+    margin-bottom:15px ;
+}
+
+.info-container div p strong,
+.conf-container h2{
+    text-align: center;
+    color: var(--platinum);
+}
+
+.info-container div p{
+    text-align: center;
+    font-size: 1rem;
+}
+.info-container div{
+    place-self: center;
+    width: 100%;
+    max-width: 250px;
+}
+
+.info-container{
+    padding:5px 30px 30px 30px;
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--oxford-blue);
+    color: var(--orange-web);
+    border-radius: 15px;
+}
+.contact-form button{
+    max-width:100%;
+    width: 90%;
+}
+.contact-form button:hover{
+    background-color: var(--platinum);
+    color: var(--oxford-blue);
+    box-shadow: 1px 1px 5px var(--orange-web);
+}
+
+.conf-container{
+    background-color: var(--oxford-blue);
+    display: flex;
+    padding-top: 30px;
+    border-radius: 15px;
+    width: 500px;
+    flex-direction: column;
+    place-items: center;
 }
 
 /* ----------------footer stuff------------ */
@@ -316,6 +408,14 @@ footer p {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
+}
+.ft-contact{
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+}
+.ft-contact button:hover{
+    box-shadow: 1px 1px 5px var(--white);
 }
 
 .joiner {

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="decription" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="style/base-small.css">
     <link rel="stylesheet" href="style/base-large.css">
+    <link rel="stylesheet" href="style/base-small.css">
     <link rel="icon" href="images/logo-done1.webp" type="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,27 +20,32 @@
 
 <body>
     <header>
-        <div>
+        <div class="logo">
             <img src="images/logo-done1.webp" alt="tecno tech logo" loading="lazy" width="75">
             <h1>Tecno Tech</h1>
         </div>
 
-        <nav class="link-bar">
-            <a href="#start">Home</a>
-            <a href="products.html">Products</a>
-            <a href="#about-us">About Us</a>
-            <a href="contact.html">Contact Us</a>
+        <div class="menu-toggle" onclick="toggleMenu()"></div>
+        <nav class="link-bar" id="menu">
+            <a id="home" href="final_project.html">Home</a>
+            <a id="products" href="products.html">Products</a>
+            <a id="about" href="#about-us">About Us</a>
+            <a id="contact" href="contact.html">Contact Us</a>
         </nav>
     </header>
-
+    
     <main>
         <div class="hero">
             <!-- for a background solid image -->
             <picture>
                 <source srcset="images/fondo2-hero.webp" media="(max-width:700px)">
-                <img src="images/fondo-hero.webp" alt="hero image" loading="lazy" width="1000">
+                <img src="images/fondo-hero.webp" alt="hero image" loading="lazy" width="100">
             </picture>
-
+            
+            <div class="hr-img-cont">
+                <!-- for a team representing image -->
+                <img src="images/webexample.webp" alt="team image" loading="lazy" width="200">
+            </div>
             <div class="hr-txt-cont">
                 <h1>We create impactful experiences<br>for your customers</h1>
                 <p>Your website, business, and brand deserves to be seen. Let's make it happen! </p>
@@ -48,10 +53,6 @@
                 <button type="button" onclick="location.href='contact.html';">Meet with our Experts</button>
             </div>
 
-            <div class="hr-img-cont">
-                <!-- for a team representing image -->
-                <img src="images/webexample.webp" alt="team image" loading="lazy" width="600">
-            </div>
         </div>
 
         <div id="start" class="main-content">
@@ -85,7 +86,7 @@
                         <figcaption>The Title</figcaption>
                     </figure>
                     
-                    <button type="button" class="bt-centered" onclick="location.href='products.html';">See More designs</button>
+                    <button type="button" class="bt-centered" onclick="location.href='products.html';">See More Designs</button>
                 </div>
 
             </section>
