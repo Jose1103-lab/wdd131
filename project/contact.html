@@ -18,7 +18,7 @@
     <meta name="author" content="Jose Brito">
 </head>
 
-<body>  
+<body>
     <header>
         <div>
             <img src="images/logo-done1.webp" alt="tecno tech logo" loading="lazy" width="75">
@@ -26,22 +26,64 @@
         </div>
 
         <nav class="link-bar">
+            <a href="final_project.html">Home</a>
             <a href="products.html">Products</a>
-            <a href="contact.html">About Us</a>
+            <a href="final_project.html#about-us">About Us</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
- 
     <main>
         <div class="main-content">
+            <section class="info-container">
+                <!-- this should be dynamic -->
+
+                <form class="contact-form">
+                    <label>Name<input type="text" id="name" name="name" required></label>
+                    <label>Reason<select id="reason" name="reason">
+                        <option value="question">Question</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Support</option>
+                    </select></label>
+
+                    <label>Message<textarea id="message" name="message" required></textarea></label>
+
+                    <label>Email<input type="email" id="email" name="email" required></label>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+            </section>
+
+
 
         </div>
     </main>
 
     <footer>
+        <img src="images/logo-done1.webp" alt="logo" width="150">
+        <div class="joiner">
+            <div class="ft-contact">
+                <h3>Do you like what you see?</h3>
+                <button type="button">Contact us</button>
+            </div>
+            <div class="net-contact">
+                <h3>More about Tecno Tech?</h3>
+                <!-- social network icons links  -->
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="images/inblue.png" alt="LinkedIn" loading="lazy" width="30"
+                            height="30"></a>
+                    <a href="#" target="_blank"><img src="images/yblue.png" alt="youtube" loading="lazy" width="30"
+                            height="30"></a>
+                    <a href="#" target="_blank"><img src="images/igblue.png" alt="instagram" loading="lazy" width="30"
+                            height="30"></a>
+                </div>
+            </div>
 
+        </div>
+        <!-- make the year dynamic -->
+        <p>&copy;<span id="year">2025</span> All Right Reserved - Tecno Tech</p>
     </footer>
-</body=>
+    </body=>
 
 </html>

@@ -26,8 +26,9 @@
         </div>
 
         <nav class="link-bar">
+            <a href="#start">Home</a>
             <a href="products.html">Products</a>
-            <a href="contact.html">About Us</a>
+            <a href="#about-us">About Us</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
@@ -36,36 +37,37 @@
         <div class="hero">
             <!-- for a background solid image -->
             <picture>
-                <source srcset="images/desktop.webp" media="(max-width:700px)">
-                <img src="images/fondo-hero.webp" alt="hero image" loading="lazy" width="500">
+                <source srcset="images/fondo2-hero.webp" media="(max-width:700px)">
+                <img src="images/fondo-hero.webp" alt="hero image" loading="lazy" width="1000">
             </picture>
+
             <div class="hr-txt-cont">
                 <h1>We create impactful experiences<br>for your customers</h1>
                 <p>Your website, business, and brand deserves to be seen. Let's make it happen! </p>
 
-                <button type="button">Meet with our Experts</button>
+                <button type="button" onclick="location.href='contact.html';">Meet with our Experts</button>
             </div>
 
             <div class="hr-img-cont">
                 <!-- for a team representing image -->
                 <img src="images/webexample.webp" alt="team image" loading="lazy" width="600">
-
             </div>
         </div>
 
-        <div class="main-content">
+        <div id="start" class="main-content">
             <section class="fir-sect">
                 <img src="images/web-design.webp" alt="website image" loading="lazy">
                 <div>
                     <h2>Why Does Your Business Deserve a Web Page?</h2>
-                    <p>In today’s digital world, having a web presence isn’t a luxury it’s a necessity. A website acts
+                    <p>In today's digital world, having a web presence isn't a luxury it's a necessity. A website acts
                         as your 24/7 storefront, helping you attract customers, build credibility, and grow your brand.
                         Whether you're a startup, a local business, or an established company, an online presence
-                        ensures you never miss an opportunity. Let’s create a website that works for you!</p>
+                        ensures you never miss an opportunity. Let's create a website that works for you!</p>
                 </div>
             </section>
 
             <section class="sec-sect">
+
                 <h2>Our Repository<hr></h2>
                 
                 <!-- what is below is a template -->
@@ -82,10 +84,10 @@
                         <img src="images/news-web.webp" alt="site preview" loading="lazy">
                         <figcaption>The Title</figcaption>
                     </figure>
-
+                    
+                    <button type="button" class="bt-centered" onclick="location.href='products.html';">See More designs</button>
                 </div>
 
-                <button type="button">See More Projects</button>
             </section>
 
             <section class="thir-sect">
@@ -98,7 +100,6 @@
                     <img src="images/vue.webp" alt="tech icon" loading="lazy" width="50" height="50">
                 </div>
             </section>
-
 
             <section class="forth-sect">
                 <div>
@@ -114,17 +115,29 @@
                     </ul>
                 </div>
                 <img src="images/connection.webp" alt="world" loading="lazy" width="500">
+
             </section>
+
+            <section id="about-us">
+                <div class="fir-sect-abt">    
+                    <h2>Our Mission<hr></h2>
+                    <p>To empower businesses with innovative web solutions that enhance their online presence and drive growth. We are committed to crafting user-friendly, visually appealing, and functional websites that meet our clients' unique needs.</p>
+                    <h2>Our Vision<hr></h2>
+                    <p>To be the leading web development agency recognized for its creative solutions, technical excellence, and unwavering commitment to client satisfaction. We strive to continuously innovate and adapt to the evolving digital landscape, helping our clients achieve their online goals.</p>
+                    <h2>Our Values<hr></h2>
+                    <p class="core">Innovation, Collaboration, Quality, Integrity, and Customer Focus.</p>
+                </div>
+            </section>              
         </div>
 
     </main>
 
     <footer>
-        <img src="images/logo-done-full.webp" alt="logo" width="225">
+        <img src="images/logo-done1.webp" alt="logo" width="150">
         <div class="joiner">
             <div class="ft-contact">
                 <h3>Do you like what you see?</h3>
-                <button type="button">Contact Us</button>
+                <button type="button" onclick="location.href='contact.html'">Contact us</button>
             </div>
             <div class="net-contact">
                 <h3>More about Tecno Tech?</h3>
