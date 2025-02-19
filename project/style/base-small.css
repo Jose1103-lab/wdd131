@@ -50,7 +50,8 @@
         grid-template-columns: 1fr;
     }
     
-    .fir-sect img{
+    .fir-sect img,
+    .hero p{
         display: none;
     }
 
