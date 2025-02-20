@@ -51,7 +51,7 @@ const products = [
     {
         name: "Social Media App",
         description: "A web application or platform for social networking, allowing users to connect, share content, and interact.",
-        category: "Social Media",
+        category: "Web app",
         source: "images/socmd-web.webp",
     },
     {
@@ -80,8 +80,8 @@ function randomProducts() {
 
 // this function retrieves of the product with the manipulation of the DOM this is also used along with the function above
 function showProducts(productArray, container){
-    const parentContainer = document.querySelector(`${container}`);
-    // parentContainer.innerHTML = '';
+    const parentContainer = document.querySelector(container);
+    parentContainer.innerHTML = '';
     productArray.forEach(product => {
         const productsContainer = document.createElement('figure');
         const imageHolder = document.createElement('img');
@@ -89,7 +89,7 @@ function showProducts(productArray, container){
         imageHolder.src = product.source;
         imageHolder.alt = product.name;
         imageHolder.loading = 'lazy';   
-        productInfo.textContent = product.name;
+        productInfo.textContent = `~ ${product.name} ~`; //using template literals just for output
         productsContainer.appendChild(imageHolder);
         productsContainer.appendChild(productInfo);
         parentContainer.appendChild(productsContainer);
@@ -100,10 +100,29 @@ function showProducts(productArray, container){
 
 try{
     showProducts(products,'#product-prev');
+
+//filters 
+    const all = document.querySelector("#all")
+    const blog = document.querySelector("#blog")
+    const education = document.querySelector("#education")
+    const webPapp = document.querySelector("#web-app")
+    const portfolio = document.querySelector("#portfolio")
+    const organization = document.querySelector("#organization")
+    all.addEventListener("click", () => { showProducts(products,"#product-prev" ) })
+    blog.addEventListener("click", () => { showProducts(products.filter(item => item.category.toLowerCase() === "blog" ),"#product-prev" ) })
+    education.addEventListener("click", () => { showProducts(products.filter(item => item.category.toLowerCase() === "education" ),"#product-prev" ) })
+    webPapp.addEventListener("click", () => { showProducts(products.filter(item => item.category.toLowerCase() === "web app" ),"#product-prev" ) })
+    portfolio.addEventListener("click", () => { showProducts(products.filter(item => item.category.toLowerCase() === "portfolio" ),"#product-prev" ) })
+    organization.addEventListener("click", () => { showProducts(products.filter(item => item.category.toLowerCase() === "organization" ),"#product-prev" ) })
+
 }catch(err){console.log("Products not loaded");}
+
 try{
     showProducts(randomProducts(),'#home-prev'); //callback function example
+
+
 }catch(err){console.log("home products preview not loaded");}
+
 
 // function that works with the responsive menu
 function toggleMenu() {
@@ -112,7 +131,6 @@ function toggleMenu() {
 }
 const menuToggle = document.querySelector("#toggler");
 menuToggle.addEventListener("click", toggleMenu); 
-
 
 // function that counts the amount of visit to our webpage and reads and stores them in the user locaa storage.
 function countVisits() {
