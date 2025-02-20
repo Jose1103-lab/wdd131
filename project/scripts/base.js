@@ -131,9 +131,6 @@ function countVisits() {
 
 countVisits()
 
-
-
-
 // section that gets the date.
 let currentYear = new Date();
 let copyrightY = document.querySelector("#year");
