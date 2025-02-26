@@ -279,13 +279,44 @@ button:hover {
 .hook a {
     text-decoration: none;
     color: var(--orange-web);
-    border-bottom: 1px solid var(#ffffff00);
+    border-bottom: 1px solid #ffffff00;
     font-size: 2rem;
 }
 
 .hook a:hover{
     border-bottom: 1px solid var(--orange-web);
 }
+
+.main-content{
+    width: 100%;
+}
+.filter{
+    padding: 0 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin: 10px 0;
+    gap: 20px;
+}
+
+.i-ftr{
+    text-decoration: none;
+    border: 1px solid var(--oxford-blue);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    width: 100px;
+    text-align: center;
+    padding: .2rem 0.5rem;
+    color: var(--oxford-blue);
+    transition: 0.8s;
+}
+
+.i-ftr:hover {
+    background-color: var(--oxford-blue);
+    color: var(--platinum);
+}
+
 
 .hero2 {
     background-color: var(--oxford-blue);

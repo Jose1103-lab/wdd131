@@ -37,6 +37,11 @@
     .link-bar.show a {
         color: var(--orange-web);
     }
+    .info-container,
+    .thir-sect,
+    .conf-container{
+        border-radius: 0;
+    }
 }
 
 @media only screen and (max-width:680px) {
@@ -60,16 +65,10 @@
         order: 1;
         grid-column: 1/2;
     }
-    .thir-sect{
-        border-radius: 0;
-    }
+
     .forth-sect img{
         width: 80%;
         max-width: 400px;
-    }
-    .info-container,
-    .conf-container{
-        border-radius: 6px;
     }
 }
 
